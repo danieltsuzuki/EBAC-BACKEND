@@ -1,0 +1,7 @@
+- Escreva um programa que peça ao usuário um número e calcule a tabuada desse número utilizando um loop while.
+- Crie um programa que simule um menu de opções utilizando o laço do-while, com as opções abaixo:
+  - Opcão 1: Continuar.
+  - Opção 2: Sair.
+- Caso o usuário escolha a opção continuar, peça em seguida para ele escrever uma palavra ou uma frase.
+- Imprima essa frase no console.
+- Caso o usuário escolha a opção sair, imprima a frase "Obrigado por utilizar o nosso sistema, espero que tenha gostado." e encerre o programa.
