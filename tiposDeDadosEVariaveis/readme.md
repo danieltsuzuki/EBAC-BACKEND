@@ -1,0 +1,3 @@
+- Dê boas vindas a um usuário no console.
+- Logo depois, peça ao usuário alguns dados: nome completo, cpf, idade, peso, altura e estado civíl.
+- Você terá de receber cada um dos dados e exibi-los de acordo com a descrição do exercício.
