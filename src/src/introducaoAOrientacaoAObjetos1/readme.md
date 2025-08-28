@@ -1,0 +1,3 @@
+- Permita que o usuário crie uma quantidade definida por ele de objetos do tipo Carro (no máximo 50), definindo os atributos de cada objeto carro.
+- Armazene esses objetos em um vetor de tipo Carro.
+- Exiba o nome de todos os carros, a quantidade de carros criados e a soma do preço total deles.
