@@ -1,0 +1,2 @@
+- Crie uma matriz 3x3 e a preencha manualmente com números inteiros.
+- Depois, imprima mostrando no console todos os elementos da matriz, na ordem que eles se encontram, linha por linha, usando um loop.
