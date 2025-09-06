@@ -1,0 +1,5 @@
+- Crie uma classe Pessoa com os campos nome e idade.
+- Implemente os métodos equals() e hashCode() para que duas pessoas com o mesmo nome e idade sejam consideradas iguais.
+- Crie uma HashSet<Pessoa> e adicione algumas instâncias de Pessoa com dados repetidos (mesmo nome e idade).
+- Mostre quantas pessoas ficaram no conjunto final e imprima os dados delas para mostrar no console.
+- Imprima também no console, uma explicação do que aconteceu no resultado do passo 4 e por quê.
