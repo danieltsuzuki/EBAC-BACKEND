@@ -1,5 +1,9 @@
-package padroesDeProjeto.model;
+package padroesDeProjeto;
 
+import padroesDeProjeto.model.Atleta;
+import padroesDeProjeto.model.Basquete;
+import padroesDeProjeto.model.Esporte;
+import padroesDeProjeto.model.Futebol;
 import padroesDeProjeto.model.padroes.AtletaBuilder;
 import padroesDeProjeto.model.padroes.EsporteFactory;
 import padroesDeProjeto.model.padroes.PraticarBasquete;
