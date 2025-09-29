@@ -1,0 +1,1 @@
+Faça uma implementação dos 3 padrões de projeto que você aprendeu a partir de novas classes criadas por você mesmo. O métodos e atributos da classe são de escolha pessoal.
