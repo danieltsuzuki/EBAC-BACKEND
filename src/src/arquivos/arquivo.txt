@@ -1,0 +1,5 @@
+ID|NOME|QUANTIDADE
+1|Arroz|35.75
+2|Miojo|2.29
+3|Detergente|2.09
+4|Sabonete|3.50
