@@ -6,7 +6,7 @@ import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.dto.EmprestimoSalvarDt
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.model.Emprestimo;
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.model.Livro;
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.model.Usuario;
-import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.util.exception.NotFoundException;
+import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.util.exception.LivroIndisponivelException;
 
 import java.util.List;
 import java.util.Optional;
@@ -104,22 +104,22 @@ public class EmprestimoService {
 
     private void validaExisteEmprestimo(List<Emprestimo> emprestimos) {
         if (emprestimos.isEmpty())
-            throw new NotFoundException("Nenhum empréstimo encontrado.");
+            throw new LivroIndisponivelException("Nenhum empréstimo encontrado.");
     }
 
     private void validaLivroEncontrado(Optional<Livro> livro) {
         if (livro.isEmpty())
-            throw new NotFoundException("Livro não encontrado.");
+            throw new LivroIndisponivelException("Livro não encontrado.");
     }
 
     private void validaUsuarioEncontrado(Optional<Usuario> usuario) {
         if (usuario.isEmpty())
-            throw new NotFoundException("Usuário não encontrado.");
+            throw new LivroIndisponivelException("Usuário não encontrado.");
     }
 
     private void validaEmprestimoNaoExistente(String titulo, String nomeUsuario) {
         if (!verificarEmprestimoExistente(titulo, nomeUsuario))
-            throw new NotFoundException("Empréstimo não encontrado.");
+            throw new LivroIndisponivelException("Empréstimo não encontrado.");
     }
 
     private void validaEmprestimoExistente(String titulo, String nomeUsuario) {
@@ -129,7 +129,7 @@ public class EmprestimoService {
 
     private void validaListaEmprestimosVazia(List<Emprestimo> emprestimos) {
         if (emprestimos.isEmpty())
-            throw new NotFoundException("Nenhum empréstimo encontrado.");
+            throw new LivroIndisponivelException("Nenhum empréstimo encontrado.");
     }
 
 }

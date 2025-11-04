@@ -4,7 +4,7 @@ import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.DB.GravadorDeDados;
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.DB.LeitorDeDados;
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.dto.LivroSalvarDto;
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.model.Livro;
-import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.util.exception.NotFoundException;
+import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.util.exception.LivroIndisponivelException;
 
 import java.util.InputMismatchException;
 import java.util.List;
@@ -48,7 +48,7 @@ public class LivroService {
         try {
             List<Livro> livros = leitorDeDados.listarLivros();
             if (livros.isEmpty())
-                throw new NotFoundException("Nenhum livro cadastrado.");
+                throw new LivroIndisponivelException("Nenhum livro cadastrado.");
             for (Livro livro : livros)
                 System.out.println(livro);
             System.out.println();
@@ -66,7 +66,7 @@ public class LivroService {
             String titulo = sc.nextLine();
             Livro livro = leitorDeDados.listarLivros().stream().filter(
                     l -> l.getTitulo().equalsIgnoreCase(titulo)
-            ).findFirst().orElseThrow(() -> new NotFoundException("Livro não encontrado"));
+            ).findFirst().orElseThrow(() -> new LivroIndisponivelException("Livro não encontrado"));
             System.out.println(livro != null ? livro + "\n" : "Livro não encontrado:");
         } catch (Exception e) {
             Logger.getLogger(LivroService.class.getName()).log(Level.SEVERE, e.getMessage());

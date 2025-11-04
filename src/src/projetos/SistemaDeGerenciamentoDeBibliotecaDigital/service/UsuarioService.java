@@ -4,7 +4,7 @@ import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.DB.GravadorDeDados;
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.DB.LeitorDeDados;
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.dto.UsuarioSalvarDto;
 import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.model.Usuario;
-import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.util.exception.NotFoundException;
+import projetos.SistemaDeGerenciamentoDeBibliotecaDigital.util.exception.LivroIndisponivelException;
 
 import java.util.List;
 import java.util.Optional;
@@ -33,7 +33,7 @@ public class UsuarioService {
         try {
             List<Usuario> usuarios = leitorDeDados.listarUsuarios();
             if (usuarios.isEmpty())
-                throw new NotFoundException("Nenhum usuário cadastrado.");
+                throw new LivroIndisponivelException("Nenhum usuário cadastrado.");
 
             for (Usuario usuario : usuarios)
                 System.out.println(usuario);
