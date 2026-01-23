@@ -38,7 +38,7 @@ class UsuarioControllerTest {
 
     @Test
     void deveRetonarUsuarioE200Ok() throws Exception {
-        mockMvc.perform(get("/usuarios/{id}", idExistente)
+        mockMvc.perform(get("/users/{id}", idExistente)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
@@ -50,7 +50,7 @@ class UsuarioControllerTest {
     void deveRetornar404QuandoUsuarioNaoExistir() throws Exception {
         Long idInexistente = 999L;
 
-        mockMvc.perform(get("/usuarios/{id}", idInexistente)
+        mockMvc.perform(get("/users/{id}", idInexistente)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNotFound())
                 .andExpect(jsonPath("$", is("Usuário não encontrado")));
